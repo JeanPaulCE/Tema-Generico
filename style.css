@@ -1,0 +1,122 @@
+/**
+Theme Name: Tema Generico
+Author: Jean Paul
+Author URI: https://jean-pi.com
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: chocucos
+Template: astra
+*/
+
+:root{
+    --x:16px;
+}
+
+.header_space{
+    padding-top: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    max-width: 1284px;
+    width: 100%;
+    margin: auto;
+}
+
+
+@media screen and (max-width: 600px) {
+    .header_space{
+        margin: 0;
+    }
+}
+/* .footer_grid{
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: space-between;
+}
+
+.footer_subgrid{
+    margin: 0 !important;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: calc(var(--x) / 2) !important;
+    
+}
+
+body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) */
+
+.footer_grid>p{
+    margin: 0;
+}
+
+.wp-block-navigation__responsive-container-open:hover,.wp-block-navigation__responsive-container-open:focus  {
+    color: var(--ast-global-color-0) !important;
+}
+
+.stk-block-carousel__content-wrapper>.stk-block-content::before {
+    content: "";
+    position: absolute;
+    width: 101%;
+    left: -0.5%;
+    height: 100%;
+    background: linear-gradient(to right, #151d29, #151d2959, #151d2900, #151d2959, #151d29);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+@media screen and (min-width: 460px) {
+    .stk-block-carousel.stk--is-slide .stk-block-carousel__slider>*{
+        transition: all 0.8s ease-in-out;
+        flex: 2 0 calc(33% / var(--slides-to-show) - var(--gap) / var(--slides-to-show)*(var(--slides-to-show) - 1)) !important;
+    }
+
+
+   
+}
+
+
+
+
+@media screen and (max-width: 460px) {
+    .stk-block-carousel.stk--is-slide .stk-block-carousel__slider>*{
+     transition: all 0.8s ease-in-out; 
+    flex: 2 0 calc(60% / var(--slides-to-show) - var(--gap) / var(--slides-to-show)*(var(--slides-to-show) - 1)) !important;
+    }
+    .stk-block-carousel.stk--is-slide .stk-block-carousel__slider>*:not(.stk-block-carousel__slide--active+.wp-block-stackable-column) {
+         transition: all 0.8s ease-in-out; 
+        flex: 2 0 calc(15% / var(--slides-to-show) - var(--gap) / var(--slides-to-show)*(var(--slides-to-show) - 1)) !important;
+        scroll-snap-align: start;
+    } 
+    .stk-block-carousel.stk--is-slide .stk-block-carousel__slider {
+        overflow-x:hidden !important;
+    }
+
+
+    /*Galeria de Animales*/
+    .animal_gallery_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .animal_gallery_card{
+        margin: 40px 0;
+    }
+    .animal_gallery_card img{
+     width: 199px;
+     height: 265px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: solid 2px #1D2C3B;
+    }
+
+    .animal_gallery_card h4{
+        color: white;
+        margin: 0;
+    }
+    .animal_gallery_card p{
+        color: white;
+    }
+} 
